@@ -23,6 +23,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 
+// Connect to MongoDB
+var mongoose = require('mongoose');
+mongoose.connect(process.env.MONGODB_SHAREIO_URI);
+var User = require('./models/user');
+User.find({}, function(err, users) {
+  console.log(users);
+});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
@@ -30,6 +38,7 @@ app.use(function(req, res, next) {
   next(err);
 });
 
+// Creating a new user
 // error handlers
 
 // development error handler
