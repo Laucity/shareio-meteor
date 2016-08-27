@@ -1,16 +1,11 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 
-var CommentBox = React.createClass({
-  render: function() {
-    return (
-      <div className="commentBox">
-        Hello, world! I am a CommentBox.
-      </div>
-    );
-  }
-});
+Color = require('./lib/color');
+
+var Login = require('./components/login');
+
 ReactDOM.render(
-  <CommentBox />,
+  <Login />,
   document.getElementById('content')
 );
