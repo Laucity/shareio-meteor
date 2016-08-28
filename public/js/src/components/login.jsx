@@ -1,6 +1,16 @@
 var React = require('react');
 
 module.exports = React.createClass({
+  componentWillMount: function() {
+    $('html').addClass('full-screen');
+    $('body').addClass('full-screen');
+  },
+
+  componentWillUnmount: function() {
+    $('html').removeClass('full-screen');
+    $('body').removeClass('full-screen');  
+  },
+
   render: function() {
     return (
       <div className="green darken-2 full-height">

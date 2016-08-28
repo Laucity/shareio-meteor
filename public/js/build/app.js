@@ -20581,44 +20581,54 @@ module.exports = require('./lib/React');
 var React = require('react');
 
 module.exports = React.createClass({
-  displayName: "exports",
+  displayName: 'exports',
+
+  componentWillMount: function () {
+    $('html').addClass('full-screen');
+    $('body').addClass('full-screen');
+  },
+
+  componentWillUnmount: function () {
+    $('html').removeClass('full-screen');
+    $('body').removeClass('full-screen');
+  },
 
   render: function () {
     return React.createElement(
-      "div",
-      { className: "green darken-2 full-height" },
+      'div',
+      { className: 'green darken-2 full-height' },
       React.createElement(
-        "div",
-        { className: "content v-center-align-absolute" },
+        'div',
+        { className: 'content v-center-align-absolute' },
         React.createElement(
-          "div",
-          { className: "logo row margin-bottom-0" },
+          'div',
+          { className: 'logo row margin-bottom-0' },
           React.createElement(
-            "div",
-            { className: "col s12 center-align white-text xxlarge-font bold-text" },
-            "S"
+            'div',
+            { className: 'col s12 center-align white-text xxlarge-font bold-text' },
+            'S'
           )
         ),
         React.createElement(
-          "div",
-          { className: "title row" },
+          'div',
+          { className: 'title row' },
           React.createElement(
-            "div",
-            { className: "col s12 center-align white-text large-font" },
-            "share.io"
+            'div',
+            { className: 'col s12 center-align white-text large-font' },
+            'share.io'
           )
         ),
         React.createElement(
-          "div",
-          { className: "login row medium-padding" },
+          'div',
+          { className: 'login row medium-padding' },
           React.createElement(
-            "div",
-            { className: "col s12 center-align" },
+            'div',
+            { className: 'col s12 center-align' },
             React.createElement(
-              "a",
-              { className: "waves-effect waves-light btn btn-large green" },
-              React.createElement("i", { className: "fa fa-facebook-official left" }),
-              "Login with Facebook"
+              'a',
+              { className: 'waves-effect waves-light btn btn-large green' },
+              React.createElement('i', { className: 'fa fa-facebook-official left' }),
+              'Login with Facebook'
             )
           )
         )
@@ -20633,11 +20643,11 @@ var ReactDOM = require('react-dom');
 
 Color = require('./lib/color');
 
-var LoginView = require('./components/login');
+var LoginView = require('./components/login.jsx');
 
 ReactDOM.render(React.createElement(LoginView, null), document.getElementById('content'));
 
-},{"./components/login":171,"./lib/color":173,"react":170,"react-dom":27}],173:[function(require,module,exports){
+},{"./components/login.jsx":171,"./lib/color":173,"react":170,"react-dom":27}],173:[function(require,module,exports){
 module.exports = {
   MEDIUM_GREEN: 'rgb(49, 144, 53)',
   LIGHT_GREEN: 'rgb(101, 173, 69)',

@@ -8477,6 +8477,10 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   overflow: visible;
   clip: auto; }
 
+.full-screen {
+  height: 100%;
+  margin: 0; }
+
 .v-center-align {
   position: relative;
   top: 50%;
