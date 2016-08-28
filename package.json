@@ -5,7 +5,9 @@
   "scripts": {
     "start": "node ./bin/www",
     "buildJS": "browserify -t [ babelify --presets [ react ] ] public/js/src/index.js -o public/js/build/app.js",
-    "buildSass": "node-sass -w public/sass/ -o public/css/"
+    "watchJS": "watchify -t [ babelify --presets [ react ] ] public/js/src/index.js -o public/js/build/app.js -v",
+    "buildSass": "node-sass public/sass/ -o public/css/",
+    "watchSass": "node-sass -w public/sass/ -o public/css/"
   },
   "dependencies": {
     "babel-preset-react": "^6.11.1",

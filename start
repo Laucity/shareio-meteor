@@ -1,0 +1,16 @@
+#!/bin/bash
+
+function newtab {
+	osascript -e "
+		tell application \"System Events\" to tell process \"Terminal\" to keystroke \"t\" using command down
+		tell application \"Terminal\" to do script \"cd \\\"$(PWD)\\\"\" in selected tab of the front window
+	" > /dev/null 2>&1
+}
+
+osascript -e 'tell application "Terminal" to activate'
+newtab
+osascript -e 'tell application "Terminal" to do script "npm run watchSass" in selected tab of the front window' 
+newtab
+osascript -e 'tell application "Terminal" to do script "npm run watchJS" in selected tab of the front window'
+newtab
+osascript -e 'tell application "Terminal" to do script "npm start" in selected tab of the front window'

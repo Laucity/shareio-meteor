@@ -20633,9 +20633,9 @@ var ReactDOM = require('react-dom');
 
 Color = require('./lib/color');
 
-var Login = require('./components/login');
+var LoginView = require('./components/login');
 
-ReactDOM.render(React.createElement(Login, null), document.getElementById('content'));
+ReactDOM.render(React.createElement(LoginView, null), document.getElementById('content'));
 
 },{"./components/login":171,"./lib/color":173,"react":170,"react-dom":27}],173:[function(require,module,exports){
 module.exports = {

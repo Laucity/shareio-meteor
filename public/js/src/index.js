@@ -3,9 +3,9 @@ var ReactDOM = require('react-dom');
 
 Color = require('./lib/color');
 
-var Login = require('./components/login');
+var LoginView = require('./components/login');
 
 ReactDOM.render(
-  <Login />,
+  <LoginView />,
   document.getElementById('content')
 );
