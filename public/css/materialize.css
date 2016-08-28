@@ -6389,3 +6389,20 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 @media (min-height: 40.125em) {
   .picker--time .picker__box {
     margin-bottom: 5em; } }
+
+.v-center-align {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%); }
+
+.v-center-align-absolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.medium-green-bg {
+  background-color: #319035; }
+
+.full-height {
+  height: 100%; }
