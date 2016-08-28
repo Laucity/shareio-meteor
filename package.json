@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "build": "browserify -t [ babelify --presets [ react ] ] public/js/src/index.js -o public/js/build/app.js"
+    "buildJS": "browserify -t [ babelify --presets [ react ] ] public/js/src/index.js -o public/js/build/app.js",
+    "buildSass": "node-sass -w public/sass/ -o public/css/"
   },
   "dependencies": {
     "babel-preset-react": "^6.11.1",

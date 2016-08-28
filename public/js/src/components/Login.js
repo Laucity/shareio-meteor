@@ -3,22 +3,22 @@ var React = require('react');
 module.exports = React.createClass({
   render: function() {
     return (
-      <div className="medium-green-bg full-height">
+      <div className="green darken-2 full-height">
         <div className="content v-center-align-absolute">
-          <div className="logo row">
-            <div className="col s12 center-align">
+          <div className="logo row margin-bottom-0">
+            <div className="col s12 center-align white-text xxlarge-font bold-text">
               S
             </div>
           </div>
           <div className="title row">
-            <div className="col s12 center-align">
+            <div className="col s12 center-align white-text large-font">
               share.io
             </div>
           </div>
-          <div className="login row">
+          <div className="login row medium-padding">
             <div className="col s12 center-align">
-              <a className="waves-effect waves-light btn">
-                <i className="material-icons left">cloud</i>
+              <a className="waves-effect waves-light btn btn-large green">
+                <i className="fa fa-facebook-official left"></i>
                 Login with Facebook
               </a>
             </div>

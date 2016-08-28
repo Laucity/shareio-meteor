@@ -20586,16 +20586,16 @@ module.exports = React.createClass({
   render: function () {
     return React.createElement(
       "div",
-      { className: "medium-green-bg full-height" },
+      { className: "green darken-2 full-height" },
       React.createElement(
         "div",
         { className: "content v-center-align-absolute" },
         React.createElement(
           "div",
-          { className: "logo row" },
+          { className: "logo row margin-bottom-0" },
           React.createElement(
             "div",
-            { className: "col s12 center-align" },
+            { className: "col s12 center-align white-text xxlarge-font bold-text" },
             "S"
           )
         ),
@@ -20604,24 +20604,20 @@ module.exports = React.createClass({
           { className: "title row" },
           React.createElement(
             "div",
-            { className: "col s12 center-align" },
+            { className: "col s12 center-align white-text large-font" },
             "share.io"
           )
         ),
         React.createElement(
           "div",
-          { className: "login row" },
+          { className: "login row medium-padding" },
           React.createElement(
             "div",
             { className: "col s12 center-align" },
             React.createElement(
               "a",
-              { className: "waves-effect waves-light btn" },
-              React.createElement(
-                "i",
-                { className: "material-icons left" },
-                "cloud"
-              ),
+              { className: "waves-effect waves-light btn btn-large green" },
+              React.createElement("i", { className: "fa fa-facebook-official left" }),
               "Login with Facebook"
             )
           )

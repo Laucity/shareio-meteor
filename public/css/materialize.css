@@ -6404,5 +6404,29 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 .medium-green-bg {
   background-color: #319035; }
 
+.light-green-bg {
+  background-color: #65ad45; }
+
 .full-height {
   height: 100%; }
+
+.bold-text {
+  font-weight: bold; }
+
+.xxlarge-font {
+  font-size: 50px; }
+
+.xlarge-font {
+  font-size: 40px; }
+
+.large-font {
+  font-size: 30px; }
+
+.medium-font {
+  font-size: 20px; }
+
+.margin-bottom-0 {
+  margin-bottom: 0px !important; }
+
+.medium-padding {
+  padding: 25px; }
