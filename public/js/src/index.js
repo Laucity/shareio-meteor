@@ -1,11 +1,22 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 
-Color = require('./lib/color');
+App = {}
+App.color = require('./lib/color');
 
-var LoginView = require('./components/login.jsx');
+var LoginView = require('./components/login/index.jsx');
+var MainView = require('./components/main/index.jsx')
+
+var AppView = React.createClass({
+  render: function() {
+    var View = $('#fbid').text() === "" ? LoginView : MainView
+    return (
+      <View />
+    )
+  }
+});
 
 ReactDOM.render(
-  <LoginView />,
+  <AppView />,
   document.getElementById('content')
 );
