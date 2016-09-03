@@ -33,7 +33,8 @@
 /* 1. Colors
    ========================================================================== */
 
-$primary-color: color("green", "base") !default;
+$primary-color: color("grey", "lighten-5") !default;
+$primary-color-transparent: rgba(red($primary-color), green($primary-color), blue($primary-color), 0.90);
 $primary-color-light: lighten($primary-color, 15%) !default;
 $primary-color-dark: darken($primary-color, 15%) !default;
 
@@ -148,7 +149,7 @@ $input-border: 1px solid $input-border-color !default;
 $input-background: #fff !default;
 $input-error-color: $error-color !default;
 $input-success-color: $success-color !default;
-$input-focus-color: $secondary-color !default;
+$input-focus-color: $primary-color !default;
 $input-font-size: 1rem !default;
 $input-margin: 0 0 20px 0 !default;
 $input-padding: 0 !default;
@@ -219,7 +220,7 @@ $element-bottom-margin: ($gutter-width*2)/3 !default;
 $navbar-height: 50px !default;
 $navbar-height-mobile: 50px !default;
 $navbar-font-size: 0.9rem !default;
-$navbar-font-color: #fff !default;
+$navbar-font-color: #000 !default;
 $navbar-brand-font-size: 1.5rem !default;
 
 /* 14. Side Navigation
