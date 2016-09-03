@@ -17,12 +17,12 @@ module.exports = React.createClass({
         <div className="content v-center-align-absolute">
           <div className="logo row margin-bottom-0">
             <div className="col s12 center-align white-text xxlarge-font bold-text">
-              S
+              K
             </div>
           </div>
           <div className="title row">
             <div className="col s12 center-align white-text large-font">
-              share.io
+              KwikShare
             </div>
           </div>
           <div className="login row medium-padding">

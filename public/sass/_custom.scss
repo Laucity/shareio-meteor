@@ -64,3 +64,10 @@ $WHITE: #fff;
 .no-background-color {
 	background-color: transparent !important;
 }
+
+.center-div {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	display: inline-block;
+}

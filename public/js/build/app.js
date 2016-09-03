@@ -20606,7 +20606,7 @@ module.exports = React.createClass({
           React.createElement(
             'div',
             { className: 'col s12 center-align white-text xxlarge-font bold-text' },
-            'S'
+            'K'
           )
         ),
         React.createElement(
@@ -20615,7 +20615,7 @@ module.exports = React.createClass({
           React.createElement(
             'div',
             { className: 'col s12 center-align white-text large-font' },
-            'share.io'
+            'KwikShare'
           )
         ),
         React.createElement(
@@ -20645,8 +20645,14 @@ var Navbar = require('./navbar/index.jsx');
 module.exports = React.createClass({
   displayName: 'exports',
 
+  getInitialState() {
+    return {
+      page: "Home"
+    };
+  },
+
   render: function () {
-    return React.createElement(Navbar, null);
+    return React.createElement(Navbar, { name: "Barack", page: this.state.page });
   }
 });
 
@@ -20664,21 +20670,77 @@ module.exports = React.createClass({
         "div",
         { className: "nav-wrapper container" },
         React.createElement(
-          "a",
-          { href: "#", className: "brand-logo" },
-          "Baro"
-        ),
-        React.createElement(
-          "ul",
-          { id: "nav-mobile", className: "right hide-on-med-and-down" },
+          "div",
+          { className: "row" },
           React.createElement(
-            "li",
-            null,
+            "div",
+            { className: "col s3" },
+            React.createElement(
+              "a",
+              { href: "#", className: "brand-logo" },
+              "KwikShare"
+            )
+          ),
+          React.createElement(
+            "div",
+            { className: "col s9" },
             React.createElement(
               "div",
-              { className: "chip no-background-color white-text" },
-              React.createElement("img", { src: "images/profile-circle.png", alt: "Contact Person" }),
-              "Barack Obama"
+              { className: "nav-profile right" },
+              React.createElement(
+                "ul",
+                { id: "nav-mobile", className: "hide-on-med-and-down" },
+                React.createElement(
+                  "li",
+                  { className: this.props.page === "Home" ? "active" : "" },
+                  React.createElement(
+                    "a",
+                    null,
+                    "Home"
+                  )
+                ),
+                React.createElement(
+                  "li",
+                  null,
+                  React.createElement(
+                    "a",
+                    null,
+                    "Feed"
+                  )
+                ),
+                React.createElement(
+                  "li",
+                  null,
+                  React.createElement(
+                    "a",
+                    null,
+                    "History"
+                  )
+                ),
+                React.createElement(
+                  "li",
+                  null,
+                  React.createElement(
+                    "a",
+                    null,
+                    "My Shit"
+                  )
+                ),
+                React.createElement(
+                  "li",
+                  null,
+                  React.createElement(
+                    "a",
+                    null,
+                    React.createElement(
+                      "div",
+                      { className: "chip no-background-color white-text center-div" },
+                      React.createElement("img", { src: "images/profile-circle.png", alt: "Contact Person" }),
+                      this.props.name
+                    )
+                  )
+                )
+              )
             )
           )
         )
@@ -20700,8 +20762,14 @@ var MainView = require('./components/main/index.jsx');
 var AppView = React.createClass({
   displayName: 'AppView',
 
+  getInitialState: function () {
+    return {
+      loggedIn: $('#fbid').text() !== ""
+    };
+  },
+
   render: function () {
-    var View = $('#fbid').text() === "" ? LoginView : MainView;
+    var View = this.state.loggedIn ? MainView : LoginView;
     return React.createElement(View, null);
   }
 });

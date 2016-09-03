@@ -8,8 +8,14 @@ var LoginView = require('./components/login/index.jsx');
 var MainView = require('./components/main/index.jsx')
 
 var AppView = React.createClass({
+  getInitialState: function() {
+    return {
+      loggedIn: $('#fbid').text() !== ""
+    }
+  },
+
   render: function() {
-    var View = $('#fbid').text() === "" ? LoginView : MainView
+    var View = this.state.loggedIn ? MainView : LoginView
     return (
       <View />
     )
